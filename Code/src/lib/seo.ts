@@ -10,7 +10,7 @@ export const defaultSEO = {
   title: "SMK Interior | Premium Interior Designers in Chennai",
   description: "SMK Interior crafts luxury residential and commercial interior spaces in Chennai. Turnkey home interiors, modular kitchens, bedrooms, and commercial fitouts.",
   siteUrl: "https://smkinterior.com",
-  defaultImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+  defaultImage: "/logo.jpeg"
 };
 
 export function getLocalBusinessSchema() {
