@@ -292,5 +292,97 @@ export const projectsData: ProjectItem[] = [
       author: "Srimathi Ramanathan",
       role: "Villa Owner, ECR Chennai"
     }
+  },
+  {
+    id: "fluted-walnut-tv-wall-omr",
+    slug: "fluted-walnut-tv-wall-omr",
+    title: "Fluted Walnut Entertainment Wall",
+    subtitle: "Warm walnut louver paneling with concealed soundbar niche, ambient LED wash, and floating matte console.",
+    location: "OMR, Chennai",
+    city: "Chennai",
+    category: "TV Unit",
+    propertyType: "Living Room Media Wall",
+    area: "280 Sq. Ft.",
+    timeline: "12 Days",
+    year: "2026",
+    coverImage: "/works/tv-unit/tv-04.jpeg",
+    heroImage: "/works/tv-unit/tv-04.jpeg",
+    overview: "Designed for a modern apartment on OMR, this entertainment wall blends warm walnut fluted panels with a recessed soundbar cavity and soft LED cove lighting to create a cinematic living room experience.",
+    designApproach: "Vertical walnut louvers are paired with a matte charcoal floating console featuring Blum soft-close drawers. Concealed cable routing keeps the wall clean while integrated LED strips provide ambient wash lighting.",
+    highlights: [
+      {
+        room: "Fluted Walnut Panel Wall",
+        description: "Floor-to-ceiling walnut louvers with hidden AV niche and warm 2700K indirect LED wash.",
+        image: "/works/tv-unit/tv-06.jpeg"
+      },
+      {
+        room: "Floating Matte Console",
+        description: "Charcoal nano-laminate floating drawers with German Blum soft-close hardware and cable management.",
+        image: "/works/tv-unit/tv-07.jpeg"
+      }
+    ],
+    beforeAfter: {
+      beforeImage: "/works/tv-unit/tv-08.jpeg",
+      afterImage: "/works/tv-unit/tv-04.jpeg",
+      label: "Entertainment Wall Makeover"
+    },
+    gallery: [
+      "/works/tv-unit/tv-04.jpeg",
+      "/works/tv-unit/tv-06.jpeg",
+      "/works/tv-unit/tv-07.jpeg",
+      "/works/tv-unit/tv-08.jpeg"
+    ],
+    testimonial: {
+      quote: "The walnut paneling and hidden soundbar niche transformed our living room into a private cinema. Absolutely stunning craftsmanship.",
+      author: "Deepak & Meera",
+      role: "Homeowners, OMR Chennai"
+    }
+  },
+  {
+    id: "contemporary-brass-pooja-guduvanchery",
+    slug: "contemporary-brass-pooja-guduvanchery",
+    title: "Contemporary Brass & Teak Pooja Sanctum",
+    subtitle: "Modern Vastu-aligned prayer niche with CNC geometric brass screens, backlit marble, and pull-out prayer drawers.",
+    location: "Guduvanchery, Chennai",
+    city: "Chennai",
+    category: "Pooja Unit",
+    propertyType: "Sacred Space Mandir",
+    area: "120 Sq. Ft.",
+    timeline: "10 Days",
+    year: "2026",
+    coverImage: "/works/pooja-unit/pooja-03.jpeg",
+    heroImage: "/works/pooja-unit/pooja-03.jpeg",
+    overview: "A contemporary take on the traditional Pooja mandir, designed for a new villa in Guduvanchery. This unit merges modern geometric brass lattice work with warm teak joinery and a backlit Italian marble altar backdrop.",
+    designApproach: "CNC-cut geometric brass screens replace traditional jali patterns, while a backlit marble panel casts a warm ambient glow. Pull-out teak drawers store puja essentials, and soft-close folding doors conceal the sanctum when not in use.",
+    highlights: [
+      {
+        room: "Geometric Brass Screen Doors",
+        description: "CNC-precision brass folding doors with modern geometric motifs and magnetic soft-close latches.",
+        image: "/works/pooja-unit/pooja-06.jpeg"
+      },
+      {
+        room: "Backlit Marble Altar",
+        description: "Italian marble backdrop panel with warm amber LED backlighting and solid teak shelf frame.",
+        image: "/works/pooja-unit/pooja-07.jpeg"
+      }
+    ],
+    beforeAfter: {
+      beforeImage: "/works/pooja-unit/pooja-08.jpeg",
+      afterImage: "/works/pooja-unit/pooja-04.jpeg",
+      label: "Pooja Sanctum Transformation"
+    },
+    gallery: [
+      "/works/pooja-unit/pooja-03.jpeg",
+      "/works/pooja-unit/pooja-04.jpeg",
+      "/works/pooja-unit/pooja-06.jpeg",
+      "/works/pooja-unit/pooja-07.jpeg",
+      "/works/pooja-unit/pooja-08.jpeg",
+      "/works/pooja-unit/pooja-09.jpeg"
+    ],
+    testimonial: {
+      quote: "The contemporary brass lattice work is breathtaking. SMK Interior created a prayer space that feels both modern and deeply spiritual.",
+      author: "Lakshmi & Venkat",
+      role: "Villa Owners, Guduvanchery"
+    }
   }
 ];

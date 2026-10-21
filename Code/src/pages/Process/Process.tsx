@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, MessageSquare } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
+import { WhatsAppIcon } from '../../components/WhatsAppButton/WhatsAppIcon';
 import { SEOComponent } from '../../components/SEO/SEOComponent';
 import { openWhatsApp } from '../../lib/whatsapp';
 
@@ -103,7 +104,7 @@ export const ProcessPage: React.FC = () => {
             onClick={() => openWhatsApp("Hi SMK Interior, I'd like to book Step 1 Site Measurement for my property.")}
             className="w-full sm:w-auto px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors shadow-lg shrink-0"
           >
-            <MessageSquare className="w-4 h-4 fill-current" />
+            <WhatsAppIcon className="w-4 h-4 shrink-0" />
             <span>Book via WhatsApp</span>
           </button>
         </div>

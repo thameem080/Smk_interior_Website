@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, ArrowDown, Play, CheckCircle2, MessageSquare, ChevronDown, Award, Clock, ShieldCheck, Sparkles, Building2, Layers, Compass } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, Phone } from 'lucide-react';
+import { WhatsAppIcon } from '../../components/WhatsAppButton/WhatsAppIcon';
 import { SEOComponent } from '../../components/SEO/SEOComponent';
 import { ServiceHoverGallery } from '../../components/ServiceGallery/ServiceHoverGallery';
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
 import { BeforeAfterSlider } from '../../components/BeforeAfterSlider/BeforeAfterSlider';
-import { MaterialSpecBoard } from '../../components/MaterialBoard/MaterialSpecBoard';
+
 import { projectsData } from '../../data/projects';
 import { testimonialsData } from '../../data/testimonials';
 import { faqData } from '../../data/faq';
-import { openWhatsApp } from '../../lib/whatsapp';
+import { openWhatsApp, PHONE_NUMBER_DISPLAY } from '../../lib/whatsapp';
 
 export const Home: React.FC = () => {
   const [activeFaq, setActiveFaq] = useState<string | null>(faqData[0].id);
@@ -40,8 +41,9 @@ export const Home: React.FC = () => {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] sm:w-[600px] h-[500px] sm:h-[600px] bg-brand-brown/25 rounded-full blur-[160px] pointer-events-none" />
 
         <div className="relative z-10 max-w-6xl mx-auto w-full my-auto flex flex-col items-center text-center gap-6 sm:gap-8">
+          {/* Hero Logo */}
+          <img src="/logo.jpeg" alt="SMK Interiors Logo" className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover border-2 border-brand-tan/30 shadow-2xl" />
           
-
           {/* Main Display Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -49,26 +51,30 @@ export const Home: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.32, 0.72, 0, 1] }}
             className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.05] tracking-tight max-w-5xl"
           >
-            CRAFTING MODERN <br className="hidden sm:block" />
-            <span className="italic font-light text-brand-tan">INTERIOR</span> SPACES.
+            SMK <span className="italic font-light text-brand-tan">INTERIORS</span>
           </motion.h1>
 
-          {/* Subtitle */}
-          <motion.p
+          {/* Subtext Quote & Description */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-sm sm:text-base md:text-lg text-brand-cream/85 font-light max-w-2xl leading-relaxed"
+            className="flex flex-col items-center gap-2 max-w-2xl"
           >
-            Architectural spatial design, custom factory millwork, and turnkey execution for modern homes & commercial spaces in Chennai.
-          </motion.p>
+            <p className="font-serif italic text-lg sm:text-2xl md:text-3xl text-brand-tan font-light tracking-wide">
+              “Crafting Modern Interior”
+            </p>
+            <p className="text-xs sm:text-sm md:text-base text-brand-cream/85 font-light leading-relaxed">
+              Architectural spatial design, custom factory millwork, and turnkey execution for modern homes & commercial spaces in Chennai.
+            </p>
+          </motion.div>
 
           {/* Hero CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3.5 pt-2 sm:pt-4 w-full max-w-xs sm:max-w-none mx-auto"
+            className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3.5 pt-2 sm:pt-4 w-full max-w-sm sm:max-w-none mx-auto"
           >
             <Link
               to="/contact"
@@ -84,9 +90,17 @@ export const Home: React.FC = () => {
               onClick={() => openWhatsApp("Hello SMK Interior, I'd like to inquire about an interior design consultation.")}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-full bg-emerald-950/40 hover:bg-emerald-900/60 border border-emerald-400/60 text-emerald-300 font-semibold text-xs uppercase tracking-wider backdrop-blur-md active:scale-[0.97] transition-all duration-300 shadow-lg"
             >
-              <MessageSquare className="w-3.5 h-3.5 fill-current text-emerald-400 shrink-0" />
+              <WhatsAppIcon className="w-4 h-4 shrink-0" />
               <span>WhatsApp Direct Inquiry</span>
             </button>
+
+            <a
+              href={`tel:${PHONE_NUMBER_DISPLAY}`}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-brand-cream font-semibold text-xs uppercase tracking-wider backdrop-blur-md active:scale-[0.97] transition-all duration-300 shadow-lg"
+            >
+              <Phone className="w-3.5 h-3.5 text-brand-tan shrink-0" />
+              <span>Call Us</span>
+            </a>
           </motion.div>
 
           {/* Key Floating Metrics Card (Mobile Compact 2x2 Grid) */}
@@ -116,32 +130,44 @@ export const Home: React.FC = () => {
 
         </div>
 
-
       </section>
 
-      {/* SECTION 2 — INTRODUCTION EDITORIAL STATEMENT */}
-      <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-brand-cream text-brand-primary bg-grid-pattern">
-        <div className="max-w-5xl mx-auto flex flex-col gap-6 sm:gap-8 text-center sm:text-left">
-          <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] font-bold text-brand-tan">
-            Architectural Vision & Philosophy
-          </span>
+      {/* SECTION 2 — FEATURED PROJECTS (Right after Hero) */}
+      <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-brand-cream border-b border-brand-brown/10">
+        <div className="max-w-6xl mx-auto flex flex-col gap-12 sm:gap-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6">
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-brand-tan font-bold">
+                Selected Portfolio
+              </span>
+              <h2 className="font-serif text-3xl sm:text-5xl font-normal text-brand-primary">
+                Featured Work
+              </h2>
+            </div>
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-brown hover:text-brand-dark transition-colors"
+            >
+              <span>Explore All Projects</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
 
-          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal leading-tight text-brand-primary">
-            “INTERIORS DESIGNED AROUND THE WAY YOU LIVE.”
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 pt-4 border-t border-brand-brown/15 text-brand-muted font-light leading-relaxed text-sm sm:text-base">
-            <p>
-              At SMK Interior, we believe every space holds an architectural story waiting to unfold. We eliminate cookie-cutter modular templates in favor of tailored interior joinery, stone backdrops, and harmonious light layering.
-            </p>
-            <p>
-              From custom modular kitchens and living interiors in Guduvanchery to full-home apartment fitouts across Chennai, our team manages design, factory manufacturing, and site handover under one roof.
-            </p>
+          {/* Asymmetric Masonry Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projectsData.filter(p => p.category === 'TV Unit' || p.category === 'Pooja Unit').slice(0, 6).map((project, idx) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                className={idx % 2 === 1 ? 'md:mt-12' : ''}
+              />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 3 — INTERACTIVE SERVICES GALLERY */}
+
+      {/* SECTION 4 — INTERACTIVE SERVICES GALLERY */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-brand-surface-warm/50 border-y border-brand-brown/10">
         <div className="max-w-6xl mx-auto flex flex-col gap-10 sm:gap-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6">
@@ -166,110 +192,9 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 4 — ARCHITECTURAL MATERIAL SPEC BOARD */}
-      <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-brand-cream border-b border-brand-brown/10">
-        <div className="max-w-6xl mx-auto">
-          <MaterialSpecBoard />
-        </div>
-      </section>
 
-      {/* SECTION 5 — FEATURED PROJECTS */}
-      <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-brand-cream">
-        <div className="max-w-6xl mx-auto flex flex-col gap-12 sm:gap-16">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6">
-            <div className="flex flex-col gap-2 sm:gap-3">
-              <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-brand-tan font-bold">
-                Selected Portfolio
-              </span>
-              <h2 className="font-serif text-3xl sm:text-5xl font-normal text-brand-primary">
-                Featured Work
-              </h2>
-            </div>
-            <Link
-              to="/projects"
-              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-brown hover:text-brand-dark transition-colors"
-            >
-              <span>Explore All Projects</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
-          </div>
 
-          {/* Asymmetric Masonry Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projectsData.slice(0, 4).map((project, idx) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                className={idx % 2 === 1 ? 'md:mt-12' : ''}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 6 — CINEMATIC VIDEO & DESIGN IN MOTION */}
-      <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-brand-dark text-white relative overflow-hidden bg-grid-pattern-dark">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
-          <div className="lg:col-span-5 flex flex-col gap-6">
-            <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] font-semibold text-brand-tan">
-              Behind The Craft
-            </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal leading-tight">
-              DESIGN IN MOTION.
-            </h2>
-            <p className="text-xs sm:text-sm font-light text-brand-cream/80 leading-relaxed">
-              Witness how bare concrete structures are systematically transformed into warm, modern spaces. From initial CAD 3D layout measurement to precision factory millwork and final zero-dust installation.
-            </p>
-
-            <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
-              <div className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded-full bg-brand-brown/50 text-brand-tan flex items-center justify-center font-bold text-xs">
-                  01
-                </div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-brand-cream">3D Architectural Spatial Rendering</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded-full bg-brand-brown/50 text-brand-tan flex items-center justify-center font-bold text-xs">
-                  02
-                </div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-brand-cream">German CNC Factory Manufacturing</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded-full bg-brand-brown/50 text-brand-tan flex items-center justify-center font-bold text-xs">
-                  03
-                </div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-brand-cream">On-Site Assembly & QC Inspection</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:col-span-7">
-            <div className="relative aspect-[16/10] rounded-[2rem] overflow-hidden border border-white/10 shadow-bezel-dark group sheen-glow">
-              <img
-                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=80"
-                alt="Design in Motion Studio Video Showcase"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <button
-                  onClick={() => openWhatsApp("Hi SMK Interior, I'd like to see video walkthroughs of your recent projects.")}
-                  className="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-brand-brown/90 hover:bg-brand-tan text-white flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110"
-                  aria-label="Play Project Video"
-                >
-                  <Play className="w-6 sm:w-8 h-6 sm:h-8 fill-current translate-x-0.5" />
-                </button>
-              </div>
-              <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-brand-dark/80 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] uppercase tracking-widest text-brand-cream border border-white/10">
-                Cinematic Project Walkthrough
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* SECTION 7 — BEFORE / AFTER TRANSFORMATION SLIDER */}
+      {/* SECTION 6 — BEFORE / AFTER TRANSFORMATION SLIDER */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-brand-cream">
         <div className="max-w-5xl mx-auto flex flex-col gap-10 sm:gap-12 text-center">
           <div className="flex flex-col gap-2 sm:gap-3 items-center">
@@ -293,7 +218,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 8 — STUDIO STATS & PROMISE */}
+      {/* SECTION 7 — STUDIO STATS & PROMISE */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-brand-surface-warm/40 border-y border-brand-brown/10">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
           <div className="flex flex-col gap-2 p-5 sm:p-6 rounded-2xl bg-white/60 border border-brand-brown/10">
@@ -315,39 +240,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 9 — 5-STEP PROCESS */}
-      <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-brand-cream">
-        <div className="max-w-6xl mx-auto flex flex-col gap-12 sm:gap-16">
-          <div className="flex flex-col gap-2 sm:gap-3 text-center items-center">
-            <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] font-bold text-brand-tan">
-              How We Work
-            </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-brand-primary">
-              Our 5-Step Execution Workflow
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              { step: '01', title: 'Discover', desc: 'Detailed site measurement, lifestyle consultation, and space budget planning.' },
-              { step: '02', title: 'Plan', desc: 'Ergonomic 2D spatial layouts, Vastu alignment, and material selection.' },
-              { step: '03', title: 'Design', desc: 'Photorealistic 3D architectural renders and sample board approvals.' },
-              { step: '04', title: 'Execute', desc: 'German CNC factory production and precision on-site assembly.' },
-              { step: '05', title: 'Transform', desc: 'Quality inspection, deep cleaning, and formal 10-year warranty handover.' }
-            ].map((p) => (
-              <div key={p.step} className="mono-card h-full">
-                <div className="p-6 flex flex-col gap-4 h-full">
-                  <span className="font-mono text-xs font-bold text-brand-tan">{p.step}</span>
-                  <h3 className="font-serif text-xl sm:text-2xl text-brand-brown font-semibold">{p.title}</h3>
-                  <p className="text-xs text-brand-muted font-light leading-relaxed">{p.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 10 — TESTIMONIALS */}
+      {/* SECTION 8 — TESTIMONIALS */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-brand-surface-warm/40 border-t border-brand-brown/10">
         <div className="max-w-6xl mx-auto flex flex-col gap-12">
           <div className="flex flex-col gap-2 sm:gap-3 text-center items-center">
@@ -383,7 +276,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 11 — FAQ ACCORDION */}
+      {/* SECTION 9 — FAQ ACCORDION */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-brand-cream">
         <div className="max-w-4xl mx-auto flex flex-col gap-10 sm:gap-12">
           <div className="flex flex-col gap-2 sm:gap-3 text-center items-center">
@@ -422,7 +315,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 12 — FINAL DARK LUXURY CTA */}
+      {/* SECTION 10 — FINAL DARK LUXURY CTA */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-brand-brown text-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-6 sm:gap-8 relative z-10">
           <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] font-semibold text-brand-tan">
@@ -452,7 +345,7 @@ export const Home: React.FC = () => {
               onClick={() => openWhatsApp("Hi SMK Interior, I want to book a free 3D design consultation for my home.")}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-full bg-emerald-950/40 hover:bg-emerald-900/60 border border-emerald-400/60 text-emerald-300 font-semibold text-xs uppercase tracking-wider backdrop-blur-md active:scale-[0.97] transition-all duration-300 shadow-lg"
             >
-              <MessageSquare className="w-3.5 h-3.5 fill-current text-emerald-400 shrink-0" />
+              <WhatsAppIcon className="w-4 h-4 shrink-0" />
               <span>WhatsApp Direct Chat</span>
             </button>
           </div>

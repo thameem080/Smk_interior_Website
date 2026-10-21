@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, MessageSquare, X } from 'lucide-react';
+import { ArrowUpRight, X } from 'lucide-react';
+import { WhatsAppIcon } from '../WhatsAppButton/WhatsAppIcon';
 import { useScrollProgress } from '../../hooks/useScrollProgress';
 import { openWhatsApp } from '../../lib/whatsapp';
 
@@ -97,7 +98,7 @@ export const Navbar: React.FC = () => {
                   : 'border-white/20 text-brand-cream hover:bg-white/10'
               }`}
             >
-              <MessageSquare className="w-3.5 h-3.5 text-emerald-500" />
+              <WhatsAppIcon className="w-4 h-4 shrink-0" />
               <span>WhatsApp</span>
             </button>
 

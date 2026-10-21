@@ -1,5 +1,6 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Clock, MessageSquare, ShieldCheck, Sparkles, CheckCircle2, Navigation, UserCheck } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ShieldCheck, Sparkles, CheckCircle2, Navigation, UserCheck } from 'lucide-react';
+import { WhatsAppIcon } from '../../components/WhatsAppButton/WhatsAppIcon';
 import { SEOComponent } from '../../components/SEO/SEOComponent';
 import { ContactForm } from '../../components/ContactForm/ContactForm';
 import { openWhatsApp, PHONE_NUMBER_DISPLAY, STUDIO_ADDRESS, STUDIO_EMAIL, STUDIO_HOURS, STUDIO_LEAD, GOOGLE_MAPS_LINK, GOOGLE_MAPS_EMBED_URL, WARRANTY_TEXT } from '../../lib/whatsapp';
@@ -166,7 +167,7 @@ export const Contact: React.FC = () => {
                     onClick={() => openWhatsApp("Hello Mohammed Sheik, I would like to schedule a visit to your Guduvanchery studio.")}
                     className="w-full py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors shadow-md mt-1 active:scale-[0.97]"
                   >
-                    <MessageSquare className="w-4 h-4 fill-current" />
+                    <WhatsAppIcon className="w-4 h-4 shrink-0" />
                     <span>WhatsApp Direct Chat</span>
                   </button>
                 </div>

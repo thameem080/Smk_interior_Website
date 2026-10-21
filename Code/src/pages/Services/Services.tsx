@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Check, MessageSquare } from 'lucide-react';
+import { ArrowUpRight, Check } from 'lucide-react';
+import { WhatsAppIcon } from '../../components/WhatsAppButton/WhatsAppIcon';
 import { SEOComponent } from '../../components/SEO/SEOComponent';
+import { MaterialSpecBoard } from '../../components/MaterialBoard/MaterialSpecBoard';
 import { servicesData } from '../../data/services';
 import { openWhatsApp } from '../../lib/whatsapp';
 
@@ -63,7 +65,7 @@ export const Services: React.FC = () => {
                       className="p-2.5 rounded-full bg-emerald-600/10 text-emerald-600 active:scale-95 transition-transform"
                       aria-label={`WhatsApp Inquiry for ${service.title}`}
                     >
-                      <MessageSquare className="w-4 h-4 fill-current" />
+                      <WhatsAppIcon className="w-4 h-4" />
                     </button>
 
                     <Link
@@ -79,6 +81,13 @@ export const Services: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* MATERIAL STANDARDS — CRAFT & PRECISION */}
+      <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-brand-cream border-t border-brand-brown/10">
+        <div className="max-w-6xl mx-auto">
+          <MaterialSpecBoard />
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Phone, Mail, MapPin, MessageSquare, Clock } from 'lucide-react';
+import { ArrowUpRight, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { WhatsAppIcon } from '../WhatsAppButton/WhatsAppIcon';
 import { openWhatsApp, PHONE_NUMBER_DISPLAY, STUDIO_ADDRESS, STUDIO_EMAIL, STUDIO_HOURS, GOOGLE_MAPS_LINK } from '../../lib/whatsapp';
 import { servicesData } from '../../data/services';
 
@@ -33,7 +34,7 @@ export const Footer: React.FC = () => {
                 onClick={() => openWhatsApp("Hi SMK Interior, I'd like to schedule a free site consultation.")}
                 className="px-4 py-2.5 rounded-full bg-emerald-700/80 hover:bg-emerald-600 text-white text-xs font-semibold tracking-wide flex items-center gap-2 transition-colors"
               >
-                <MessageSquare className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4 shrink-0" />
                 <span>WhatsApp Consultation</span>
               </button>
               <a

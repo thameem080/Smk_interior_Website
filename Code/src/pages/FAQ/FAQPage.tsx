@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ChevronDown, MessageSquare } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
+import { WhatsAppIcon } from '../../components/WhatsAppButton/WhatsAppIcon';
 import { SEOComponent } from '../../components/SEO/SEOComponent';
 import { faqData } from '../../data/faq';
 import { openWhatsApp } from '../../lib/whatsapp';
@@ -94,7 +95,7 @@ export const FAQPage: React.FC = () => {
             onClick={() => openWhatsApp("Hi SMK Interior, I have a custom question about your interior services.")}
             className="w-full sm:w-auto px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors shadow-lg shrink-0"
           >
-            <MessageSquare className="w-4 h-4 fill-current" />
+            <WhatsAppIcon className="w-4 h-4 shrink-0" />
             <span>Ask on WhatsApp</span>
           </button>
         </div>

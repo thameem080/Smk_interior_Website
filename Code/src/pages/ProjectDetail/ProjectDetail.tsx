@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, MapPin, Calendar, Layers, Check, MessageSquare, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, MapPin, Calendar, Layers, Check, ArrowUpRight } from 'lucide-react';
+import { WhatsAppIcon } from '../../components/WhatsAppButton/WhatsAppIcon';
 import { SEOComponent } from '../../components/SEO/SEOComponent';
 import { projectsData } from '../../data/projects';
 import { BeforeAfterSlider } from '../../components/BeforeAfterSlider/BeforeAfterSlider';
@@ -208,7 +209,7 @@ export const ProjectDetail: React.FC = () => {
               onClick={() => openWhatsApp(`Hi SMK Interior, I love your ${project.title} project. I'd like to discuss a similar interior project.`)}
               className="px-6 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
             >
-              <MessageSquare className="w-4 h-4 fill-current" />
+              <WhatsAppIcon className="w-4 h-4 shrink-0" />
               <span>Inquire about this design on WhatsApp</span>
             </button>
           </div>

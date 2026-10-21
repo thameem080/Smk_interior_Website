@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, Check, ShieldCheck, MessageSquare, ArrowUpRight, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import { ArrowLeft, Check, ShieldCheck, ArrowUpRight, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import { WhatsAppIcon } from '../../components/WhatsAppButton/WhatsAppIcon';
 import { SEOComponent } from '../../components/SEO/SEOComponent';
 import { servicesData } from '../../data/services';
 import { openWhatsApp } from '../../lib/whatsapp';
@@ -220,7 +221,7 @@ export const ServiceDetail: React.FC = () => {
                     onClick={() => openWhatsApp(`Hello SMK Interior, I'd like to consult regarding ${service.title} for my project.`)}
                     className="w-full py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 transition-colors shadow-lg"
                   >
-                    <MessageSquare className="w-4 h-4 fill-current" />
+                    <WhatsAppIcon className="w-4 h-4 shrink-0" />
                     <span>Inquire via WhatsApp</span>
                   </button>
 
