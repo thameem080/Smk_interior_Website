@@ -339,50 +339,45 @@ export const projectsData: ProjectItem[] = [
     }
   },
   {
-    id: "contemporary-brass-pooja-guduvanchery",
-    slug: "contemporary-brass-pooja-guduvanchery",
-    title: "Contemporary Brass & Teak Pooja Sanctum",
-    subtitle: "Modern Vastu-aligned prayer niche with CNC geometric brass screens, backlit marble, and pull-out prayer drawers.",
+    id: "dressing-table-wardrobe-chennai",
+    slug: "dressing-table-wardrobe-chennai",
+    title: "Integrated Dressing Table & Wardrobe",
+    subtitle: "Space-saving teak & white gloss wardrobe with built-in LED mirror dressing unit and pull-out drawers.",
     location: "Guduvanchery, Chennai",
     city: "Chennai",
-    category: "Pooja Unit",
-    propertyType: "Sacred Space Mandir",
-    area: "120 Sq. Ft.",
+    category: "TV Unit",
+    propertyType: "Bedroom Furniture",
+    area: "80 Sq. Ft.",
     timeline: "10 Days",
     year: "2026",
-    coverImage: "/works/pooja-unit/pooja-03.jpeg",
-    heroImage: "/works/pooja-unit/pooja-03.jpeg",
-    overview: "A contemporary take on the traditional Pooja mandir, designed for a new villa in Guduvanchery. This unit merges modern geometric brass lattice work with warm teak joinery and a backlit Italian marble altar backdrop.",
-    designApproach: "CNC-cut geometric brass screens replace traditional jali patterns, while a backlit marble panel casts a warm ambient glow. Pull-out teak drawers store puja essentials, and soft-close folding doors conceal the sanctum when not in use.",
+    coverImage: "/works/dressing-table.jpeg",
+    heroImage: "/works/dressing-table.jpeg",
+    overview: "A beautifully integrated bedroom solution combining a full-height wardrobe with a built-in dressing unit. Features warm teak wood upper cabinets, crisp white gloss lower panels, an LED-backlit vanity mirror, and two smooth pull-out drawers.",
+    designApproach: "We maximised vertical space with floor-to-ceiling teak veneered overhead cabinets while the lower section uses anti-fingerprint white gloss for a bright, spacious feel. The integrated LED mirror dressing unit sits seamlessly between the wardrobe panels.",
     highlights: [
       {
-        room: "Geometric Brass Screen Doors",
-        description: "CNC-precision brass folding doors with modern geometric motifs and magnetic soft-close latches.",
-        image: "/works/pooja-unit/pooja-06.jpeg"
+        room: "LED Vanity Mirror",
+        description: "Built-in backlit LED mirror with warm 3000K ring lighting and integrated power socket for styling tools.",
+        image: "/works/dressing-table.jpeg"
       },
       {
-        room: "Backlit Marble Altar",
-        description: "Italian marble backdrop panel with warm amber LED backlighting and solid teak shelf frame.",
-        image: "/works/pooja-unit/pooja-07.jpeg"
+        room: "Teak & White Wardrobe",
+        description: "Floor-to-ceiling teak veneer overhead storage combined with white gloss push-to-open wardrobe panels.",
+        image: "/works/dressing-table.jpeg"
       }
     ],
     beforeAfter: {
-      beforeImage: "/works/pooja-unit/pooja-08.jpeg",
-      afterImage: "/works/pooja-unit/pooja-04.jpeg",
-      label: "Pooja Sanctum Transformation"
+      beforeImage: "/works/dressing-table.jpeg",
+      afterImage: "/works/dressing-table.jpeg",
+      label: "Bedroom Dressing Unit"
     },
     gallery: [
-      "/works/pooja-unit/pooja-03.jpeg",
-      "/works/pooja-unit/pooja-04.jpeg",
-      "/works/pooja-unit/pooja-06.jpeg",
-      "/works/pooja-unit/pooja-07.jpeg",
-      "/works/pooja-unit/pooja-08.jpeg",
-      "/works/pooja-unit/pooja-09.jpeg"
+      "/works/dressing-table.jpeg"
     ],
     testimonial: {
-      quote: "The contemporary brass lattice work is breathtaking. SMK Interior created a prayer space that feels both modern and deeply spiritual.",
-      author: "Lakshmi & Venkat",
-      role: "Villa Owners, Guduvanchery"
+      quote: "The dressing unit blends perfectly with the wardrobe. The LED mirror and pull-out drawers make our bedroom feel like a boutique hotel.",
+      author: "Fatima & Shan",
+      role: "Homeowners, Guduvanchery"
     }
   }
 ];
