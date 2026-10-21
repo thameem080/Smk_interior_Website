@@ -5,10 +5,9 @@ import { ArrowUpRight, ChevronDown, Phone } from 'lucide-react';
 import { WhatsAppIcon } from '../../components/WhatsAppButton/WhatsAppIcon';
 import { SEOComponent } from '../../components/SEO/SEOComponent';
 import { ServiceHoverGallery } from '../../components/ServiceGallery/ServiceHoverGallery';
-import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
 import { BeforeAfterSlider } from '../../components/BeforeAfterSlider/BeforeAfterSlider';
 
-import { projectsData } from '../../data/projects';
+import { galleryData } from '../../data/galleryData';
 import { testimonialsData } from '../../data/testimonials';
 import { faqData } from '../../data/faq';
 import { openWhatsApp, PHONE_NUMBER_DISPLAY } from '../../lib/whatsapp';
@@ -166,36 +165,71 @@ export const Home: React.FC = () => {
 
       </section>
 
-      {/* SECTION 2 — FEATURED PROJECTS (Right after Hero) */}
+      {/* SECTION 2 — REAL PROJECT PHOTO GALLERY (Right after Hero) */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-brand-cream border-b border-brand-brown/10">
-        <div className="max-w-6xl mx-auto flex flex-col gap-12 sm:gap-16">
+        <div className="max-w-6xl mx-auto flex flex-col gap-10 sm:gap-14">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6">
             <div className="flex flex-col gap-2 sm:gap-3">
               <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-brand-tan font-bold">
-                Selected Portfolio
+                Real Work Portfolio
               </span>
               <h2 className="font-serif text-3xl sm:text-5xl font-normal text-brand-primary">
-                Featured Work
+                Project Photo Gallery
               </h2>
             </div>
             <Link
               to="/projects"
               className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-brown hover:text-brand-dark transition-colors"
             >
-              <span>Explore All Projects</span>
+              <span>View All 26 Photos</span>
               <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>
 
-          {/* Asymmetric Masonry Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projectsData.filter(p => p.category === 'Hall Unit' || p.category === 'Modular Kitchen' || p.category === 'TV Unit' || p.category === 'Pooja Unit').slice(0, 6).map((project, idx) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                className={idx % 2 === 1 ? 'md:mt-12' : ''}
-              />
+          {/* Real Photo Showcase Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {galleryData.slice(0, 6).map((item) => (
+              <Link
+                key={item.id}
+                to="/projects"
+                className="group relative block overflow-hidden rounded-2xl bg-brand-dark shadow-md hover:shadow-2xl transition-all duration-500 border border-brand-brown/10"
+              >
+                <div className="aspect-[4/3] w-full overflow-hidden bg-brand-dark/40">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                  />
+                </div>
+                <div className="absolute top-3 left-3 z-10">
+                  <span className="px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider font-semibold bg-brand-dark/80 text-brand-cream backdrop-blur-md border border-white/10">
+                    {item.category}
+                  </span>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-brand-dark/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-5 text-white">
+                  <span className="text-[10px] uppercase tracking-widest text-brand-tan font-bold">
+                    {item.tag}
+                  </span>
+                  <h3 className="font-serif text-lg font-medium leading-snug line-clamp-1 group-hover:text-brand-cream transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-brand-cream/75 line-clamp-1 font-light mt-1">
+                    {item.description}
+                  </p>
+                </div>
+              </Link>
             ))}
+          </div>
+
+          <div className="flex justify-center pt-2">
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-brand-brown hover:bg-brand-dark text-white text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-xl active:scale-95"
+            >
+              <span>Explore All 26 Project Photos in Gallery</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
