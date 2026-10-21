@@ -6,7 +6,7 @@ import { projectsData } from '../../data/projects';
 export const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const categories = ['All', 'Residential', 'Modular Kitchen', 'Commercial', 'TV Unit', 'Pooja Unit'];
+  const categories = ['All', 'Hall Unit', 'Modular Kitchen', 'TV Unit', 'Pooja Unit', 'Residential', 'Commercial'];
 
   const filteredProjects = selectedCategory === 'All'
     ? projectsData

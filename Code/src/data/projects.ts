@@ -5,7 +5,7 @@ export interface ProjectItem {
   subtitle: string;
   location: string;
   city: string;
-  category: "Residential" | "Modular Kitchen" | "Commercial" | "Renovation" | "Pooja Unit" | "TV Unit";
+  category: "Residential" | "Modular Kitchen" | "Commercial" | "Renovation" | "Pooja Unit" | "TV Unit" | "Hall Unit";
   propertyType: string;
   area: string;
   timeline: string;
@@ -33,6 +33,106 @@ export interface ProjectItem {
 }
 
 export const projectsData: ProjectItem[] = [
+  {
+    id: "architectural-hall-unit-chennai",
+    slug: "architectural-hall-unit-chennai",
+    title: "Contemporary Architectural Hall Unit",
+    subtitle: "Custom CNC geometric louvers, concealed display storage, and ambient LED backlit feature partition.",
+    location: "Medavakkam, Chennai",
+    city: "Chennai",
+    category: "Hall Unit",
+    propertyType: "Living Room Partition & Hall Unit",
+    area: "140 Sq. Ft.",
+    timeline: "14 Days",
+    year: "2026",
+    coverImage: "/works/hall-unit/hall-03.jpeg",
+    heroImage: "/works/hall-unit/hall-01.jpeg",
+    overview: "Crafted for an open-plan contemporary residence in Chennai, this multi-functional hall unit acts as an elegant spatial divider between the foyer and living room. Featuring bespoke CNC geometric detailing, display shelving, and soft warm ambient backlighting.",
+    designApproach: "We designed an architectural partition unit that maximizes natural light flow while offering functional storage and display niches. Built with 100% Marine BWR plywood and finished with premium laminates and soft-close hardware.",
+    highlights: [
+      {
+        room: "Geometric Louver Screen",
+        description: "Precision CNC cut timber screen allowing filtered light while defining the living hall zone.",
+        image: "/works/hall-unit/hall-01.jpeg"
+      },
+      {
+        room: "Integrated Display Shelving",
+        description: "Backlit curio niches with warm 3000K LED wash to showcase artifacts and family keepsakes.",
+        image: "/works/hall-unit/hall-02.jpeg"
+      },
+      {
+        room: "Concealed Base Console",
+        description: "Soft-close storage cabinets with seamless push-to-open hardware for clutter-free living.",
+        image: "/works/hall-unit/hall-03.jpeg"
+      }
+    ],
+    beforeAfter: {
+      beforeImage: "/works/hall-unit/hall-02.jpeg",
+      afterImage: "/works/hall-unit/hall-03.jpeg",
+      label: "Hall Unit Transformation"
+    },
+    gallery: [
+      "/works/hall-unit/hall-03.jpeg",
+      "/works/hall-unit/hall-01.jpeg",
+      "/works/hall-unit/hall-02.jpeg"
+    ],
+    testimonial: {
+      quote: "The hall partition unit is the first thing guests notice when they enter. The craftsmanship and lighting are exceptional.",
+      author: "Karthik & Divya",
+      role: "Homeowners, Medavakkam Chennai"
+    }
+  },
+  {
+    id: "luxury-modular-kitchen-chennai",
+    slug: "luxury-modular-kitchen-chennai",
+    title: "Precision Modular Kitchen Execution",
+    subtitle: "High-gloss acrylic cabinetry, heavy-duty tandem drawers, and ergonomic workflow engineering.",
+    location: "Pallikaranai, Chennai",
+    city: "Chennai",
+    category: "Modular Kitchen",
+    propertyType: "L-Shape Modular Kitchen",
+    area: "160 Sq. Ft.",
+    timeline: "20 Days",
+    year: "2026",
+    coverImage: "/works/kitchen-unit/kitchen-05.jpeg",
+    heroImage: "/works/kitchen-unit/kitchen-05.jpeg",
+    overview: "A chef-grade contemporary modular kitchen delivered in Chennai, designed for maximum durability and effortless everyday use. Built with 100% waterproof BWP grade marine plywood, scratch-resistant acrylic shutters, and German soft-close fittings.",
+    designApproach: "We engineered an optimized work triangle between the cooking hub, sink, and refrigerator. Features heavy-duty cutlery trays, corner pull-out carousels, dedicated appliance tall units, and seamless overhead storage.",
+    highlights: [
+      {
+        room: "Acrylic High-Gloss Storage",
+        description: "Anti-fingerprint, easy-clean high-gloss acrylic panels in a balanced two-tone color scheme.",
+        image: "/works/kitchen-unit/kitchen-05.jpeg"
+      },
+      {
+        room: "Heavy-Duty Tandem Drawers",
+        description: "German soft-close drawer runners rated for 40kg capacity with modular utensil organizers.",
+        image: "/works/kitchen-unit/kitchen-01.jpeg"
+      },
+      {
+        room: "Overhead Lift-Up Cabinets",
+        description: "Bi-fold pneumatic lift-up overhead shutters with integrated under-cabinet task lighting.",
+        image: "/works/kitchen-unit/kitchen-02.jpeg"
+      }
+    ],
+    beforeAfter: {
+      beforeImage: "/works/kitchen-unit/kitchen-03.jpeg",
+      afterImage: "/works/kitchen-unit/kitchen-05.jpeg",
+      label: "Modular Kitchen Transformation"
+    },
+    gallery: [
+      "/works/kitchen-unit/kitchen-05.jpeg",
+      "/works/kitchen-unit/kitchen-01.jpeg",
+      "/works/kitchen-unit/kitchen-02.jpeg",
+      "/works/kitchen-unit/kitchen-03.jpeg",
+      "/works/kitchen-unit/kitchen-04.jpeg"
+    ],
+    testimonial: {
+      quote: "SMK Interior delivered our kitchen exactly on the promised 20th day. The soft-close drawers and waterproof marine plywood give us total peace of mind.",
+      author: "Venkatesh & Sowmya",
+      role: "Homeowners, Pallikaranai Chennai"
+    }
+  },
   {
     id: "modern-2bhk-chennai",
     slug: "modern-2bhk-chennai",

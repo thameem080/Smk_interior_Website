@@ -12,7 +12,7 @@ export const Services: React.FC = () => {
     <div className="w-full pt-28 pb-20">
       <SEOComponent
         title="Interior Design Services | SMK Interior Catalog"
-        description="Explore SMK Interior's 8 specialized interior services in Chennai: Complete Home Interiors, Modular Kitchens, Bedroom Interiors, Wardrobes, False Ceiling, Office Fitouts."
+        description="Explore SMK Interior's 6 specialized interior services in Chennai: Complete Home Interiors, Modular Kitchens, Living Room Interiors, Custom Wardrobes, TV Units, and Pooja Mandirs."
       />
 
       {/* Services Grid — Straight to Content */}

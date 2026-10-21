@@ -50,12 +50,13 @@ export const servicesData: ServiceItem[] = [
     title: "Modular Kitchens",
     shortDescription: "Precision-engineered kitchens blending ergonomic workflows, soft-close hardware, and pristine finishes.",
     fullDescription: "A kitchen is the heart of every modern home. We design custom modular kitchens optimized for Indian cooking styles, featuring heavy-duty drawer systems, pull-out larders, stain-resistant quartz tops, and seamless chimney integrations.",
-    coverImage: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1920&q=85",
+    coverImage: "/works/kitchen-unit/kitchen-05.jpeg",
     galleryImages: [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=1600&q=85"
+      "/works/kitchen-unit/kitchen-05.jpeg",
+      "/works/kitchen-unit/kitchen-01.jpeg",
+      "/works/kitchen-unit/kitchen-02.jpeg",
+      "/works/kitchen-unit/kitchen-03.jpeg",
+      "/works/kitchen-unit/kitchen-04.jpeg"
     ],
     features: [
       "L-Shape, Parallel, Island & U-Shape Configurations",
@@ -71,42 +72,17 @@ export const servicesData: ServiceItem[] = [
     seoDescription: "Custom luxury modular kitchens designed and installed in Chennai. Heavy-duty hardware, waterproof plywood, and acrylic/matte finishes by SMK Interior."
   },
   {
-    id: "bedroom-interiors",
-    slug: "bedroom-interiors",
-    number: "03",
-    title: "Bedroom Interiors",
-    shortDescription: "Sanctuaries of calm featuring tailored headboards, acoustic wall paneling, and intelligent ambient lighting.",
-    fullDescription: "Your bedroom should be a sanctuary. We craft serene sleeping environments featuring upholstered acoustic headboards, integrated study desks, ambient cove lighting, and space-saving wardrobes tailored to your daily routine.",
-    coverImage: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1920&q=85",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=1600&q=85"
-    ],
-    features: [
-      "Custom King/Queen Bed Frames with Hydraulic Storage",
-      "Acoustic Fabric & Wooden Fluted Wall Paneling",
-      "Dimmable Smart Bedside Lighting & Charging Docks",
-      "Floating Vanity Mirrors & Integrated Workstations"
-    ],
-    materials: ["Teak Wood Accents", "Velvet & Linen Upholstery", "Warm Oak Fluted Panels", "Hafele Magnetic Door Locks"],
-    idealFor: "Master bedrooms, guest bedrooms, and kids' themed bedrooms.",
-    turnaroundTime: "20 Working Days",
-    seoTitle: "Modern Bedroom Interior Design in Chennai | SMK Interior",
-    seoDescription: "Sleek, comforting bedroom interior designs by SMK Interior Chennai. Hydraulic beds, acoustic headboards, customized wardrobes, and warm ambient lighting."
-  },
-  {
     id: "living-room-interiors",
     slug: "living-room-interiors",
-    number: "04",
+    number: "03",
     title: "Living Room Interiors",
     shortDescription: "Statement living zones featuring stone TV walls, custom sectional sofas, and architectural louvers.",
     fullDescription: "The living room sets the tone for your entire home. We design commanding entertainment units with sintered stone backdrops, fluted wood louvers, custom seating arrangements, and warm ambient light layers.",
-    coverImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=85",
+    coverImage: "/works/hall-unit/hall-03.jpeg",
     galleryImages: [
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85"
+      "/works/hall-unit/hall-03.jpeg",
+      "/works/hall-unit/hall-01.jpeg",
+      "/works/hall-unit/hall-02.jpeg"
     ],
     features: [
       "Sintered Stone & Marble Backlit TV Walls",
@@ -123,7 +99,7 @@ export const servicesData: ServiceItem[] = [
   {
     id: "wardrobes",
     slug: "wardrobes",
-    number: "05",
+    number: "04",
     title: "Custom Wardrobes",
     shortDescription: "Sleek sliding glass, tinted aluminum profile, and floor-to-ceiling walk-in wardrobes with internal LED sensors.",
     fullDescription: "Maximize storage while elevating your bedroom aesthetics with our floor-to-ceiling wardrobes. We offer sliding profile doors, tinted glass walk-in closets, and customized organizers for accessories, shoes, and suits.",
@@ -145,33 +121,9 @@ export const servicesData: ServiceItem[] = [
     seoDescription: "Explore luxury sliding glass wardrobes, walk-in closets, and hinged door designs in Chennai by SMK Interior."
   },
   {
-    id: "false-ceiling",
-    slug: "false-ceiling",
-    number: "06",
-    title: "False Ceiling & Lighting",
-    shortDescription: "Architectural Gypsum ceiling designs, magnetic tracking lights, and indirect mood cove lights.",
-    fullDescription: "Transform spatial ambience with custom architectural ceiling plans. We seamlessly embed linear magnetic tracking lights, anti-glare recessed COB spotlights, and warm LED cove channels into seamlessly finished Saint-Gobain Gyproc false ceilings.",
-    coverImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=85",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=85"
-    ],
-    features: [
-      "Seamless Saint-Gobain Gyproc Gypsum Boards",
-      "Magnetic Low-Voltage Track Profile Lighting",
-      "Anti-Glare Deep Recessed Architectural Spotlights",
-      "Custom Perimeter Cove & Step Ceiling Designs"
-    ],
-    materials: ["Saint-Gobain Gyproc Gypsum", "Anodized Aluminum Magnetic Tracks", "CRI 90+ Warm White LED Strips"],
-    idealFor: "Living rooms, dining halls, master suites, and commercial spaces.",
-    turnaroundTime: "10 Working Days",
-    seoTitle: "False Ceiling & Lighting Design in Chennai | SMK Interior",
-    seoDescription: "Elevate your ceilings with architectural gypsum design and magnetic track lighting by SMK Interior Chennai."
-  },
-  {
     id: "tv-units",
     slug: "tv-units",
-    number: "07",
+    number: "05",
     title: "TV Units & Media Walls",
     shortDescription: "Sintered stone feature walls, acoustic fluted louvers, and floating consoles with concealed wiring tracks.",
     fullDescription: "Transform your main living room into a commanding visual centerpiece. Our custom TV unit designs combine backlit sintered marble slabs, vertical acoustic louvers, integrated LED cove channels, and soft-close floating consoles.",
@@ -202,7 +154,7 @@ export const servicesData: ServiceItem[] = [
   {
     id: "pooja-units",
     slug: "pooja-units",
-    number: "08",
+    number: "06",
     title: "Pooja Units & Mandir Joinery",
     shortDescription: "Serene Vastu-aligned sacred mandir spaces crafted with CNC brass jali, backlit onyx, and teak wood.",
     fullDescription: "Bring tranquility and sacred elegance into your home with our custom Pooja unit designs. Engineered according to strict Vastu principles, we integrate laser-etched brass lattice screens, warm backlit translucent onyx backdrops, dedicated incense drawers, and brass bell accents.",

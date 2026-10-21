@@ -189,7 +189,7 @@ export const Home: React.FC = () => {
 
           {/* Asymmetric Masonry Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projectsData.filter(p => p.category === 'TV Unit' || p.category === 'Pooja Unit').slice(0, 6).map((project, idx) => (
+            {projectsData.filter(p => p.category === 'Hall Unit' || p.category === 'Modular Kitchen' || p.category === 'TV Unit' || p.category === 'Pooja Unit').slice(0, 6).map((project, idx) => (
               <ProjectCard
                 key={project.id}
                 project={project}
