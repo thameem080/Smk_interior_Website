@@ -74,32 +74,62 @@ export const Home: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col items-center justify-center gap-2.5 pt-2 sm:pt-4 w-full max-w-xs sm:max-w-none mx-auto"
+            className="w-full pt-2 sm:pt-4 mx-auto"
           >
-            {/* Primary CTA — full width on mobile */}
-            <Link
-              to="/contact"
-              className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2.5 pl-6 pr-2 py-3 rounded-full bg-brand-cream hover:bg-white text-brand-dark font-semibold text-xs uppercase tracking-wider active:scale-[0.97] transition-all duration-300 shadow-xl"
-            >
-              <span>Start a Project</span>
-              <span className="w-6 h-6 rounded-full bg-brand-brown text-white flex items-center justify-center group-hover:rotate-45 transition-transform duration-300 shadow-sm shrink-0">
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
+            {/* Mobile View CTA: Stacked primary + side-by-side secondary */}
+            <div className="flex sm:hidden flex-col items-center justify-center gap-2.5 w-full max-w-xs mx-auto">
+              <Link
+                to="/contact"
+                className="w-full group relative inline-flex items-center justify-center gap-2.5 pl-6 pr-2 py-3 rounded-full bg-brand-cream hover:bg-white text-brand-dark font-semibold text-xs uppercase tracking-wider active:scale-[0.97] transition-all duration-300 shadow-xl"
+              >
+                <span>Start a Project</span>
+                <span className="w-6 h-6 rounded-full bg-brand-brown text-white flex items-center justify-center group-hover:rotate-45 transition-transform duration-300 shadow-sm shrink-0">
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </span>
+              </Link>
 
-            {/* Secondary CTAs — side by side on mobile */}
-            <div className="flex flex-row w-full gap-2 sm:flex-row sm:w-auto">
+              <div className="flex flex-row w-full gap-2">
+                <button
+                  onClick={() => openWhatsApp("Hello SMK Interior, I'd like to inquire about an interior design consultation.")}
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-emerald-950/40 hover:bg-emerald-900/60 border border-emerald-400/60 text-emerald-300 font-semibold text-xs uppercase tracking-wider backdrop-blur-md active:scale-[0.97] transition-all duration-300 shadow-lg"
+                >
+                  <WhatsAppIcon className="w-3.5 h-3.5 shrink-0" />
+                  <span className="truncate">WhatsApp</span>
+                </button>
+
+                <a
+                  href={`tel:${PHONE_NUMBER_DISPLAY}`}
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-brand-cream font-semibold text-xs uppercase tracking-wider backdrop-blur-md active:scale-[0.97] transition-all duration-300 shadow-lg"
+                >
+                  <Phone className="w-3.5 h-3.5 text-brand-tan shrink-0" />
+                  <span>Call Us</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Desktop View CTA: Original single horizontal row */}
+            <div className="hidden sm:flex flex-row items-center justify-center gap-3.5 max-w-none mx-auto">
+              <Link
+                to="/contact"
+                className="group relative inline-flex items-center justify-center gap-2.5 pl-6 pr-2 py-2.5 sm:py-3 rounded-full bg-brand-cream hover:bg-white text-brand-dark font-semibold text-xs uppercase tracking-wider active:scale-[0.97] transition-all duration-300 shadow-xl"
+              >
+                <span>Start a Project</span>
+                <span className="w-6 h-6 rounded-full bg-brand-brown text-white flex items-center justify-center group-hover:rotate-45 transition-transform duration-300 shadow-sm shrink-0">
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </span>
+              </Link>
+
               <button
                 onClick={() => openWhatsApp("Hello SMK Interior, I'd like to inquire about an interior design consultation.")}
-                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-emerald-950/40 hover:bg-emerald-900/60 border border-emerald-400/60 text-emerald-300 font-semibold text-xs uppercase tracking-wider backdrop-blur-md active:scale-[0.97] transition-all duration-300 shadow-lg"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-full bg-emerald-950/40 hover:bg-emerald-900/60 border border-emerald-400/60 text-emerald-300 font-semibold text-xs uppercase tracking-wider backdrop-blur-md active:scale-[0.97] transition-all duration-300 shadow-lg"
               >
-                <WhatsAppIcon className="w-3.5 h-3.5 shrink-0" />
-                <span className="truncate">WhatsApp</span>
+                <WhatsAppIcon className="w-4 h-4 shrink-0" />
+                <span>WhatsApp Direct Inquiry</span>
               </button>
 
               <a
                 href={`tel:${PHONE_NUMBER_DISPLAY}`}
-                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-brand-cream font-semibold text-xs uppercase tracking-wider backdrop-blur-md active:scale-[0.97] transition-all duration-300 shadow-lg"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-brand-cream font-semibold text-xs uppercase tracking-wider backdrop-blur-md active:scale-[0.97] transition-all duration-300 shadow-lg"
               >
                 <Phone className="w-3.5 h-3.5 text-brand-tan shrink-0" />
                 <span>Call Us</span>
